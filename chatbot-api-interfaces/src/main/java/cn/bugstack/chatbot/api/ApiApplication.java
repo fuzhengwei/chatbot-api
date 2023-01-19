@@ -2,6 +2,7 @@ package cn.bugstack.chatbot.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @author 小傅哥，微信：fustack
