@@ -3,8 +3,7 @@
 ## 项目介绍
 
 1. 技术栈：Java、SpringBoot、爬虫、ChatGPT、job、Docker
-2. OpenAi Keys 申请：[https://beta.openai.com/account/api-keys](https://beta.openai.com/account/api-keys) - 用于处理扫码知识星球问题进行调用获取答案。
-
+2. OpenAi Keys 申请：[https://beta.openai.com/account/api-keys](https://beta.openai.com/account/api-keys) - 用于处理扫码知识星球问题进行调用获取答案。**如果你申请时遇到一些问，可以加小傅哥微信【fustack】付费20元申请**
 
 ## 课程目录
 
@@ -21,3 +20,5 @@
 ## 加入星球【ChatGPT AI 问答助手】
 
 你可以通过微信扫码，加入知识星球【ChatGPT AI 问答助手】，在手机端对ChatGPT进行提问。
+
+![](https://gitcode.net/fuzhengwei/chatbot-api/-/blob/main/docs/images/zsxq.jpeg)
