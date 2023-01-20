@@ -31,7 +31,7 @@
 
 **注意**：
 1. 技术栈：Java、SpringBoot、爬虫、ChatGPT、job、Docker
-2. OpenAi Keys 申请：[https://beta.openai.com/account/api-keys](https://beta.openai.com/account/api-keys) - 用于处理扫码知识星球问题进行调用获取答案。**如果你申请时遇到一些问，可以加小傅哥微信【fustack】付费20元申请**
+2. OpenAi Keys 申请：[https://beta.openai.com/account/api-keys](https://beta.openai.com/account/api-keys) - 用于处理扫码知识星球问题进行调用获取答案。
 3. 在学习的过程中，可以看到每一个章节都有一个对应的代码分支，可以把代码拉取到本地切换到对应的分支进行对照学习。
 
 ### 2. 课程目录
