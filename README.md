@@ -11,6 +11,7 @@
 
 ## ⛳ 目录
 
+- [Github](https://github.com/fuzhengwei/chatbot-api) | [Gitcode](https://gitcode.net/fuzhengwei/chatbot-api)
 - [1. 项目介绍](#1-项目介绍)
 - [2. 课程目录](#2-课程目录)
 - [3. 加入星球](#3-加入星球) - 体验 ChatGPT 使用
