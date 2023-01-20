@@ -2,6 +2,7 @@
 
 ## 资料
 
+**如果你需要链接云服务，那么需要在远程 Docker 开启下面的配置**
 ```java
 vim /usr/lib/systemd/system/docker.service
 在ExecStart=/usr/bin/dockerd-current 后面加上 -H tcp://0.0.0.0:2375 -H unix://var/run/docker.sock \
