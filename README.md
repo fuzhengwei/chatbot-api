@@ -9,7 +9,7 @@
 - :love_letter: 微信：[fustack](https://bugstack.cn/images/personal/fustack.png) - 备注来意
 - :feet: 我的编程知识星球：[实战生产级项目、手写框架级源码，可以向我 1对1 提问，解答技术/职场/规划问题](https://bugstack.cn/md/zsxq/introduce.html)
 
-### 项目介绍
+### 1. 项目介绍
 
 ❤️ 这个项目本身是小傅哥为自己的知识星球开发的一个智能问答回复系统，用于帮助读者解决一些常见的技术问题，提高回答效率也减少小傅哥的对此类问题的时间投入。通过演示我们可以看到，有了这样一个智能AI问答助手，可以大大的减少很多对于这些通用类技术问题的回复，同时也可以把这样的问答内容沉淀到知识星球，方便其他人学习使用。
 
@@ -25,7 +25,7 @@
 1. 技术栈：Java、SpringBoot、爬虫、ChatGPT、job、Docker
 2. OpenAi Keys 申请：[https://beta.openai.com/account/api-keys](https://beta.openai.com/account/api-keys) - 用于处理扫码知识星球问题进行调用获取答案。**如果你申请时遇到一些问，可以加小傅哥微信【fustack】付费20元申请**
 
-### 课程目录
+### 2. 课程目录
 
 | 目录                                                     | 视频 | Github                                                       | Gitcode                                                      |
 | -------------------------------------------------------- | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -37,10 +37,14 @@
 | 第5节：整合知识星球与ChatGPT，完成自动化回答             |      | [【23_xfg_job】](https://github.com/fuzhengwei/chatbot-api/tree/23_xfg_job) | [【23_xfg_job】](https://gitcode.net/fuzhengwei/chatbot-api/-/tree/23_xfg_job) |
 | 第6节：打包镜像文件，部署服务到 Docker 容器              |      | [【23_xfg_docker】](https://github.com/fuzhengwei/chatbot-api/tree/23_xfg_docker) | [【23_xfg_docker】](https://gitcode.net/fuzhengwei/chatbot-api/-/tree/23_xfg_docker) |
 
-### 加入星球【ChatGPT AI 问答助手】
+### 3. 加入星球【ChatGPT AI 问答助手】
 
 你可以通过微信扫码，加入知识星球【ChatGPT AI 问答助手】，在手机端对ChatGPT进行提问。
 
 <div align="center">
     <img src="https://gitcode.net/fuzhengwei/chatbot-api/-/blob/main/docs/images/zsxq.jpeg?raw=true" width="350px">
 </div>
+
+### 4. 版权说明
+
+此项目为 Apache License 2.0 开源协议项目，以学习为目的进行创作，禁止培训机构、私人号主、公司组织等以各类收费形式进行销售。如果你有合作诉求，请与小傅哥联系获得书面授权，微信：fustack 
