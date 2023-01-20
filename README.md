@@ -11,6 +11,8 @@
 - :love_letter: 微信：[fustack](https://bugstack.cn/images/personal/fustack.png) - 备注来意
 - :feet: 我的编程知识星球：[实战生产级项目、手写框架级源码，可以向我 1对1 提问，解答技术/职场/规划问题](https://bugstack.cn/md/zsxq/introduce.html)
 
+---
+
 ### 项目介绍
 
 1. 技术栈：Java、SpringBoot、爬虫、ChatGPT、job、Docker
@@ -32,4 +34,6 @@
 
 你可以通过微信扫码，加入知识星球【ChatGPT AI 问答助手】，在手机端对ChatGPT进行提问。
 
-![](https://gitcode.net/fuzhengwei/chatbot-api/-/blob/main/docs/images/zsxq.jpeg)
+<div align="center">
+    <img src="https://gitcode.net/fuzhengwei/chatbot-api/-/blob/main/docs/images/zsxq.jpeg?raw=true" width="350px">
+</div>
