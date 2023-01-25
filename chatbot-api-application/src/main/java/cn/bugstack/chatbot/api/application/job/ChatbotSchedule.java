@@ -66,7 +66,7 @@ public class ChatbotSchedule {
             }
 
             // 2. AI 回答
-            Topics topic = topics.get(0);
+            Topics topic = topics.get(topics.size() - 1);
             String answer = openAI.doChatGPT(topic.getQuestion().getText().trim());
             // 3. 问题回复
             boolean status = zsxqApi.answer(groupId, cookie, topic.getTopic_id(), answer, false);

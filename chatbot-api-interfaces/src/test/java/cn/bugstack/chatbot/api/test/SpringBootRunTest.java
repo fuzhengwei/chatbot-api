@@ -51,7 +51,7 @@ public class SpringBootRunTest {
             logger.info("topicId：{} text：{}", topicId, text);
 
             // 回答问题
-            zsxqApi.answer(groupId, cookie, topicId, text, false);
+            zsxqApi.answer(groupId, cookie, topicId, openAI.doChatGPT(text), false);
         }
     }
 
