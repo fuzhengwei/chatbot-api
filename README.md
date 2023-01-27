@@ -48,6 +48,7 @@
 | 第4节：对接ChatGPT，调用接口                             | [【23_xfg_chatgpt】](https://github.com/fuzhengwei/chatbot-api/tree/23_xfg_chatgpt) | [【23_xfg_chatgpt】](https://gitcode.net/fuzhengwei/chatbot-api/-/tree/23_xfg_chatgpt) |
 | 第5节：整合知识星球与ChatGPT，完成自动化回答             | [【23_xfg_job】](https://github.com/fuzhengwei/chatbot-api/tree/23_xfg_job) | [【23_xfg_job】](https://gitcode.net/fuzhengwei/chatbot-api/-/tree/23_xfg_job) |
 | 第6节：打包镜像文件，部署服务到 Docker 容器              | [【23_xfg_docker】](https://github.com/fuzhengwei/chatbot-api/tree/23_xfg_docker) | [【23_xfg_docker】](https://gitcode.net/fuzhengwei/chatbot-api/-/tree/23_xfg_docker) |
+| 【扩展】第7节：多组任务服务配置          | [【230127-xfg-task】](https://github.com/fuzhengwei/chatbot-api/tree/230127-xfg-task) | [【230127-xfg-task】](https://gitcode.net/fuzhengwei/chatbot-api/-/tree/230127-xfg-task) |
 
 ### 3. 加入星球【ChatGPT AI 问答助手】
 
