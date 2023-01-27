@@ -29,10 +29,12 @@ public class SpringBootRunTest {
 
     private Logger logger = LoggerFactory.getLogger(SpringBootRunTest.class);
 
-    @Value("${chatbot-api.groupId}")
+    @Value("${chatbot-api.group01.groupId}")
     private String groupId;
-    @Value("${chatbot-api.cookie}")
+    @Value("${chatbot-api.group01.cookie}")
     private String cookie;
+    @Value("${chatbot-api.group01.openAiKey}")
+    private String openAiKey;
 
     @Resource
     private IZsxqApi zsxqApi;
@@ -51,13 +53,13 @@ public class SpringBootRunTest {
             logger.info("topicId：{} text：{}", topicId, text);
 
             // 回答问题
-            zsxqApi.answer(groupId, cookie, topicId, openAI.doChatGPT(text), false);
+            zsxqApi.answer(groupId, cookie, topicId, openAI.doChatGPT(openAiKey, text), false);
         }
     }
 
     @Test
     public void test_openAi() throws IOException {
-        String response = openAI.doChatGPT("帮我写一个java冒泡排序");
+        String response = openAI.doChatGPT(openAiKey, "帮我写一个java冒泡排序");
         logger.info("测试结果：{}", response);
     }
 

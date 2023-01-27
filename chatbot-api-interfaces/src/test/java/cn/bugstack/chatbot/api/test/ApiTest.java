@@ -12,6 +12,8 @@ import org.apache.http.util.EntityUtils;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 
 /**
  * @author 小傅哥，微信：fustack
@@ -20,6 +22,12 @@ import java.io.IOException;
  * @Copyright 公众号：bugstack虫洞栈 | 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
  */
 public class ApiTest {
+
+    @Test
+    public void base64(){
+        String cronExpression = new String(Base64.getDecoder().decode("MC81MCAqICogKiAqID8="), StandardCharsets.UTF_8);
+        System.out.println(cronExpression);
+    }
 
     @Test
     public void query_unanswered_questions() throws IOException {
