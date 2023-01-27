@@ -28,3 +28,4 @@ hs_err_pid*
 /.idea/
 
 /docs/ppt/~*.pptx
+/docs/config/docker.config
