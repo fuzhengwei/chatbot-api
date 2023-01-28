@@ -10,9 +10,11 @@ chatbot-api:
     cookie:  # 知识星球个人cookie信息
     openAiKey:  # 自行申请 https://beta.openai.com/overview 或者联系小傅哥 fustack 付费申请【购买虚拟号码等需要支付】。
     cronExpression: 0/30 * * * * ? # 执行的频次配置，参考：cron.qqe2.com
+    silenced: false
   group02:
     groupName: 码农会锁
     groupId: 28885518425541 # 知识星球ID
     cookie:  # 知识星球个人cookie信息
     openAiKey:  # 自行申请 https://beta.openai.com/overview 或者联系小傅哥 fustack 付费申请【购买虚拟号码等需要支付】。
     cronExpression: 0/30 * * * * ? # 执行的频次配置，参考：cron.qqe2.com
+    silenced: true

@@ -27,17 +27,19 @@ public class ChatbotTask implements Runnable {
     private String groupId;
     private String cookie;
     private String openAiKey;
+    private boolean silenced;
 
     private IZsxqApi zsxqApi;
     private IOpenAI openAI;
 
-    public ChatbotTask(String groupName, String groupId, String cookie, String openAiKey, IZsxqApi zsxqApi, IOpenAI openAI) {
+    public ChatbotTask(String groupName, String groupId, String cookie, String openAiKey, IZsxqApi zsxqApi, IOpenAI openAI, boolean silenced) {
         this.groupName = groupName;
         this.groupId = groupId;
         this.cookie = cookie;
         this.openAiKey = openAiKey;
         this.zsxqApi = zsxqApi;
         this.openAI = openAI;
+        this.silenced = silenced;
     }
 
     @Override
@@ -68,7 +70,7 @@ public class ChatbotTask implements Runnable {
             Topics topic = topics.get(topics.size() - 1);
             String answer = openAI.doChatGPT(openAiKey, topic.getQuestion().getText().trim());
             // 3. 问题回复
-            boolean status = zsxqApi.answer(groupId, cookie, topic.getTopic_id(), answer, false);
+            boolean status = zsxqApi.answer(groupId, cookie, topic.getTopic_id(), answer, silenced);
             logger.info("{} 编号：{} 问题：{} 回答：{} 状态：{}", groupName, topic.getTopic_id(), topic.getQuestion().getText(), answer, status);
         } catch (Exception e) {
             logger.error("{} 自动回答问题异常", groupName, e);
