@@ -52,7 +52,8 @@
 
 ### 3. 加入星球【ChatGPT AI 问答助手】
 
-你可以通过微信扫码，加入知识星球【ChatGPT AI 问答助手】，在手机端对ChatGPT进行提问。
+- PC端访问：[https://wx.zsxq.com/dweb2/index/group/28885518425541](https://wx.zsxq.com/dweb2/index/group/28885518425541)
+- APP端提问：你可以通过微信扫码，加入知识星球【ChatGPT AI 问答助手】，在手机端对ChatGPT进行提问。
 
 <div align="center">
     <img src="https://bugstack.cn/images/system/zsxq/zsxq-ai.jpeg?raw=true" width="350px">
