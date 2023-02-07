@@ -23,6 +23,11 @@ import java.util.Base64;
  */
 public class ApiTest {
 
+    public static void main(String[] args) {
+        TextGenerator textGenerator = GPT2Util.get345M();
+        System.out.println(textGenerator.generateText(500));
+    }
+
     @Test
     public void base64(){
         String cronExpression = new String(Base64.getDecoder().decode("MC81MCAqICogKiAqID8="), StandardCharsets.UTF_8);
@@ -33,9 +38,9 @@ public class ApiTest {
     public void query_unanswered_questions() throws IOException {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
-        HttpGet get = new HttpGet("https://api.zsxq.com/v2/groups/48411118851818/topics?scope=unanswered_questions&count=20");
+        HttpGet get = new HttpGet("https://api.zsxq.com/v2/groups/28885518425541/topics?scope=unanswered_questions&count=20");
 
-        get.addHeader("cookie", "知识星球个人cookie信息");
+        get.addHeader("cookie", "zsxq_access_token=77D0F49F-1B2; abtest_env=product; zsxqsessionid=5673f4269d07");
         get.addHeader("Content-Type", "application/json;charset=utf8");
 
         CloseableHttpResponse response = httpClient.execute(get);

@@ -41,6 +41,7 @@ public class ZsxqApi implements IZsxqApi {
 
         get.addHeader("cookie", cookie);
         get.addHeader("Content-Type", "application/json;charset=utf8");
+        get.addHeader("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36");
 
         CloseableHttpResponse response = httpClient.execute(get);
         if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {

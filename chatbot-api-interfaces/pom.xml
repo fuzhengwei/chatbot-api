@@ -74,6 +74,10 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
         </dependency>
+       <!-- <dependency>
+            <groupId>com.simiacryptus</groupId>
+            <artifactId>tf-gpt-2</artifactId>
+        </dependency>-->
 
         <dependency>
             <groupId>cn.bugstack.ai</groupId>
