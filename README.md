@@ -87,3 +87,11 @@ pip install tf-nightly
 ```
 
 mac：`python3 -m pip install tensorflow-macos`
+
+测试：
+
+```python
+python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+
+# 结果；tf.Tensor(228.22836, shape=(), dtype=float32)
+```
