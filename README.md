@@ -64,3 +64,26 @@
 ### 4. 版权说明
 
 此项目为 Apache License 2.0 开源协议项目，以学习为目的进行创作，禁止培训机构、私人号主、公司组织等以各类收费形式进行销售。如果你有合作诉求，请与小傅哥联系获得书面授权，微信：fustack 
+
+---
+
+### 5. 模型训练
+
+#### 5.1 tensorflow
+
+地址：[https://www.tensorflow.org/install?hl=zh-cn](https://www.tensorflow.org/install?hl=zh-cn)
+
+脚本：
+
+```python
+# Requires the latest pip
+pip install --upgrade pip
+
+# Current stable release for CPU and GPU
+pip install tensorflow
+
+# Or try the preview build (unstable)
+pip install tf-nightly
+```
+
+mac：`python3 -m pip install tensorflow-macos`
