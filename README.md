@@ -86,7 +86,7 @@ pip install tensorflow
 pip install tf-nightly
 ```
 
-mac：`python3 -m pip install tensorflow-macos`
+mac m1：`python3 -m pip install tensorflow-macos`
 
 测试：
 
