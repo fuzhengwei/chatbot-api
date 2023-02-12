@@ -73,6 +73,8 @@
 
 地址：[https://www.tensorflow.org/install?hl=zh-cn](https://www.tensorflow.org/install?hl=zh-cn)
 
+注意：以下需要用到 pip 指令，如果没有需要安装 'curl https://bootstrap.pypa.io/get-pip.py | python3'
+
 脚本：
 
 ```python
