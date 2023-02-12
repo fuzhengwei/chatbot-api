@@ -69,11 +69,19 @@
 
 ### 5. 模型训练
 
-#### 5.1 tensorflow
+#### 5.1 环境安装
+
+- 下载 Python：[https://www.python.org/downloads/macos/](https://www.python.org/downloads/macos/) 3.6版本以上
+- 配置 Python：
+    1. 搜索地址 `which python3`
+    2. 环境配置 `alias python="/Library/Frameworks/Python.framework/Versions/3.10/bin/python3"`
+    3. 生效配置 `source .bash_profile`
+    
+- 安装 pip：以下需要用到 pip 指令，如果没有需要安装 'curl https://bootstrap.pypa.io/get-pip.py | python3'
+
+#### 5.3 tensorflow
 
 地址：[https://www.tensorflow.org/install?hl=zh-cn](https://www.tensorflow.org/install?hl=zh-cn)
-
-注意：以下需要用到 pip 指令，如果没有需要安装 'curl https://bootstrap.pypa.io/get-pip.py | python3'
 
 脚本：
 
