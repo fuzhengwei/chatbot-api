@@ -36,7 +36,7 @@ public class OpenAI implements IOpenAI {
 
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
-        HttpPost post = new HttpPost("https://api.openai.com/v1/completions");
+        HttpPost post = new HttpPost("https://open.aiproxy.xyz/v1/completions");
         post.addHeader("Content-Type", "application/json");
         post.addHeader("Authorization", "Bearer " + openAiKey);
 
