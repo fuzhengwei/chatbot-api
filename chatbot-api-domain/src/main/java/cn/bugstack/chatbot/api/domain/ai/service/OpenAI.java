@@ -35,8 +35,8 @@ public class OpenAI implements IOpenAI {
     public String doChatGPT(String openAiKey, String question) throws IOException {
 
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
-
-        HttpPost post = new HttpPost("https://open.aiproxy.xyz/v1/completions");
+        // 代理地址；open.aiproxy.xyz、open2.aiproxy.xyz
+        HttpPost post = new HttpPost("https://api.openai.com/v1/completions");
         post.addHeader("Content-Type", "application/json");
         post.addHeader("Authorization", "Bearer " + openAiKey);
 
