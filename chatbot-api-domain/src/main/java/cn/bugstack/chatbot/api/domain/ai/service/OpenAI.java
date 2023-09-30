@@ -2,6 +2,7 @@ package cn.bugstack.chatbot.api.domain.ai.service;
 
 import cn.bugstack.chatbot.api.domain.ai.IOpenAI;
 import cn.bugstack.chatbot.api.domain.ai.model.aggregates.AIAnswer;
+import cn.bugstack.chatbot.api.domain.ai.model.aggregates.AIQuestion;
 import cn.bugstack.chatbot.api.domain.ai.model.vo.Choices;
 import com.alibaba.fastjson.JSON;
 import org.apache.http.HttpStatus;
@@ -14,7 +15,6 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -31,16 +31,23 @@ public class OpenAI implements IOpenAI {
 
     private Logger logger = LoggerFactory.getLogger(OpenAI.class);
 
+    private String proxyUrl = "https://api.openai.com";
+
+    private String chatUri = "/v1/chat/completions";
+
+    private String model = "gpt-3.5-turbo-0613";
+
     @Override
     public String doChatGPT(String openAiKey, String question) throws IOException {
 
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
         // 代理地址；open.aiproxy.xyz、open2.aiproxy.xyz
-        HttpPost post = new HttpPost("https://api.openai.com/v1/completions");
+        HttpPost post = new HttpPost(proxyUrl + chatUri);
         post.addHeader("Content-Type", "application/json");
         post.addHeader("Authorization", "Bearer " + openAiKey);
 
-        String paramJson = "{\"model\": \"text-davinci-003\", \"prompt\": \"" + question + "\", \"temperature\": 0, \"max_tokens\": 1024}";
+        AIQuestion aiQuestion = new AIQuestion(model, question);
+        String paramJson = JSON.toJSONString(aiQuestion.getCompletion());
 
         StringEntity stringEntity = new StringEntity(paramJson, ContentType.create("text/json", "UTF-8"));
         post.setEntity(stringEntity);
@@ -52,7 +59,7 @@ public class OpenAI implements IOpenAI {
             StringBuilder answers = new StringBuilder();
             List<Choices> choices = aiAnswer.getChoices();
             for (Choices choice : choices) {
-                answers.append(choice.getText());
+                answers.append(choice.getMessage().getContent());
             }
             return answers.toString();
         } else {
