@@ -22,6 +22,13 @@ import java.util.Base64;
  * @Copyright 公众号：bugstack虫洞栈 | 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
  */
 public class ApiTest {
+    private String cookie = ""; // 知识星球个人cookie信息
+    private String webUrl = "https://api.zsxq.com";
+    private String getTopicUri = "/v2/groups/48411118851818/topics?scope=unanswered_questions&count=20";
+
+    private String apiToken = ""; // 自行申请 https://beta.openai.com/overview
+    private String proxyUrl = "https://api.openai.com";
+    private String chatUri = "/v1/chat/completions";
 
     @Test
     public void base64(){
@@ -33,9 +40,9 @@ public class ApiTest {
     public void query_unanswered_questions() throws IOException {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
-        HttpGet get = new HttpGet("https://api.zsxq.com/v2/groups/48411118851818/topics?scope=unanswered_questions&count=20");
+        HttpGet get = new HttpGet(webUrl + getTopicUri);
 
-        get.addHeader("cookie", "知识星球个人cookie信息");
+        get.addHeader("cookie", cookie);
         get.addHeader("Content-Type", "application/json;charset=utf8");
 
         CloseableHttpResponse response = httpClient.execute(get);
@@ -51,8 +58,8 @@ public class ApiTest {
     public void answer() throws IOException {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
-        HttpPost post = new HttpPost("https://api.zsxq.com/v2/topics/412884248251548/answer");
-        post.addHeader("cookie", "知识星球个人cookie信息");
+        HttpPost post = new HttpPost(webUrl + "/v2/topics/" + "412884248251548" + "/answer");
+        post.addHeader("cookie", cookie);
         post.addHeader("Content-Type", "application/json;charset=utf8");
 
         String paramJson = "{\n" +
@@ -79,11 +86,15 @@ public class ApiTest {
     public void test_chatGPT() throws IOException {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
-        HttpPost post = new HttpPost("https://api.openai.com/v1/completions");
+        HttpPost post = new HttpPost(proxyUrl + chatUri);
         post.addHeader("Content-Type", "application/json");
-        post.addHeader("Authorization", "Bearer 自行申请 https://beta.openai.com/overview");
+        post.addHeader("Authorization", "Bearer " + apiToken);
 
-        String paramJson = "{\"model\": \"text-davinci-003\", \"prompt\": \"帮我写一个java冒泡排序\", \"temperature\": 0, \"max_tokens\": 1024}";
+        String paramJson = "{\n" +
+                "  \"model\": \"gpt-3.5-turbo\",\n" +
+                "  \"messages\": [{\"role\": \"user\", \"content\": \"Say this is a test!\"}],\n" +
+                "  \"temperature\": 0.7\n" +
+                "}";
 
         StringEntity stringEntity = new StringEntity(paramJson, ContentType.create("text/json", "UTF-8"));
         post.setEntity(stringEntity);
@@ -95,7 +106,5 @@ public class ApiTest {
         } else {
             System.out.println(response.getStatusLine().getStatusCode());
         }
-
     }
-
 }
