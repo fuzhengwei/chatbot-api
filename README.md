@@ -12,7 +12,7 @@
 ## ⛳ 目录
 
 - 代理方案：因访问问题，需要把 api.openai.com 替换成代理域名 open.aiproxy.xyz @By [学院君 geekr-dev](https://github.com/geekr-dev)
- [https://github.com/geekr-dev/openai-proxy](https://github.com/geekr-dev/openai-proxy)
+ [https://github.com/geekr-dev/openai-proxy](https://github.com/geekr-dev/openai-proxy) 或者对接 [ChatGLM SDK](https://bugstack.cn/md/road-map/http.html) - 并且做了对接星球回帖。
 - [Github](https://github.com/fuzhengwei/chatbot-api) | [Gitcode](https://gitcode.net/fuzhengwei/chatbot-api)
 - [0. 学习加群](#) - 添加小傅哥微信【fustack】备注【ChatGPT AI 问答助手 学习加群】
 - [1. 项目介绍](#1-项目介绍)
