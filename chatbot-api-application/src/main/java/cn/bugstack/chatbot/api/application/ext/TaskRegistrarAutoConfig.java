@@ -47,7 +47,9 @@ public class TaskRegistrarAutoConfig implements EnvironmentAware, SchedulingConf
     public void setEnvironment(Environment environment) {
         String prefix = "chatbot-api.";
         String launchListStr = environment.getProperty(prefix + "launchList");
-        if (StringUtils.isEmpty(launchListStr)) return;
+        if (StringUtils.isEmpty(launchListStr)) {
+            return;
+        }
         for (String groupKey : launchListStr.split(",")) {
             Map<String, Object> taskGroupProps = PropertyUtil.handle(environment, prefix + groupKey, Map.class);
             taskGroupMap.put(groupKey, taskGroupProps);

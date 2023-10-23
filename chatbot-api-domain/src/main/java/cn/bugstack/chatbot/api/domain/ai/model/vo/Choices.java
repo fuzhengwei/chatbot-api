@@ -7,21 +7,18 @@ package cn.bugstack.chatbot.api.domain.ai.model.vo;
  * @Copyright 公众号：bugstack虫洞栈 | 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
  */
 public class Choices {
-
-    private String text;
+    private Message message;
 
     private int index;
 
-    private String logprobs;
-
     private String finish_reason;
 
-    public String getText() {
-        return text;
+    public Message getMessage() {
+        return message;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setMessage(Message message) {
+        this.message = message;
     }
 
     public int getIndex() {
@@ -30,14 +27,6 @@ public class Choices {
 
     public void setIndex(int index) {
         this.index = index;
-    }
-
-    public String getLogprobs() {
-        return logprobs;
-    }
-
-    public void setLogprobs(String logprobs) {
-        this.logprobs = logprobs;
     }
 
     public String getFinish_reason() {
